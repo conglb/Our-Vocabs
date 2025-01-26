@@ -56,8 +56,9 @@
             appId: "1:555258623815:web:80de0565813efca9867e62",
             measurementId: "G-VQS1QZNV3X"
         };
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const firebase = initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        const analytics = getAnalytics(firebase);
 
 
         let lastVisible = null;
